@@ -16,7 +16,7 @@ export const Addproducts = () => {
         setImageUrl(url);
         // Basic validation for URL format (you can expand this as needed)
         if (!url.startsWith('http://') && !url.startsWith('https://')) {
-            setImageError('Please provide a valid URL.');
+            setImageError('');
         } else {
             setImageError('');
         }
