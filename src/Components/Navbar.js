@@ -41,7 +41,7 @@ export const Navbar = ({ user }) => {
           <>
             <div>
               <Link className='navlink' to='/'>
-                {user}
+                Hi {user}
               </Link>
             </div>
             <div className='cart-menu-btn'>
