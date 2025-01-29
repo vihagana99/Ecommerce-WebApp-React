@@ -74,7 +74,7 @@ export const Home = () => {
  
   const addToCart = async (product) => {
     if (uid !== null) {
-      const productRef = doc(fs, `Cart  ${uid}`, product.ID); // Firestore 'doc' function භාවිතා කරන්න
+      const productRef = doc(fs, `Cart ${uid}`, product.ID); // Firestore 'doc' function භාවිතා කරන්න
       const productData = {
         ...product,
         qty: 1,

@@ -25,14 +25,10 @@ export const Navbar = ({ user }) => {
         {!user && (
           <>
             <div>
-              <Link className='navlink' to='/signup'>
-                SING UP
-              </Link>
+              <Link className='navlink' to='/signup'>SING UP</Link>
             </div>
             <div>
-              <Link className='navlink' to='/login'>
-                LOGIN
-              </Link>
+              <Link className='navlink' to='/login'>LOGIN</Link>
             </div>
           </>
         )}
@@ -40,9 +36,7 @@ export const Navbar = ({ user }) => {
         {user && (
           <>
             <div>
-              <Link className='navlink' to='/'>
-                Hi {user}
-              </Link>
+              <Link className='navlink' to='/'>Hi {user}</Link>
             </div>
             <div className='cart-menu-btn'>
               <Link className='navlink' to='/cart'>
