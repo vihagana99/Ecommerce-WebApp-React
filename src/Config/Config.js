@@ -3,6 +3,8 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore, collection, getDoc, doc, setDoc } from 'firebase/firestore'; // Add setDoc import
 import { getStorage } from 'firebase/storage';
 
+// Firebase configuration
+
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -12,6 +14,7 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const fs = getFirestore(app);
