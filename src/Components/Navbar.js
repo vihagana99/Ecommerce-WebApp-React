@@ -11,7 +11,7 @@ export const Navbar = ({ user, totalProduct }) => {
 
   const handleLogout = () => {
     auth.signOut().then(() => {
-      navigate('/login');
+      navigate('/');
     });
   };
 

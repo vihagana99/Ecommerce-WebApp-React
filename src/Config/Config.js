@@ -1,24 +1,21 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import { getFirestore, collection, getDoc, doc, setDoc } from 'firebase/firestore'; // Add setDoc import
+import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDQU4xtAjUt-Qtkty5UMLf5fZtScZjDo0Y",
-  authDomain: "ecommerce-app-react-65e14.firebaseapp.com",
-  projectId: "ecommerce-app-react-65e14",
-  storageBucket: "ecommerce-app-react-65e14.firebasestorage.app",
-  messagingSenderId: "406116218361",
-  appId: "1:406116218361:web:bc9cbd580f5a17eefaf928",
-  measurementId: "G-DT0ELY6YFW"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Initialize services
 const auth = getAuth(app);
-const fs = getFirestore(app); // Initialize Firestore
+const fs = getFirestore(app);
 const storage = getStorage(app);
 
-export { auth, fs, storage, collection, getDoc, doc, setDoc }; // Export setDoc
+export { auth, fs, storage };
