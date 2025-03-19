@@ -26,7 +26,7 @@ export const Navbar = ({ user, totalProduct }) => {
         {!user && (
           <>
             <div>
-              <Link className='navlink' to='/signup'>SING_UP</Link>
+              <Link className='navlink' to='/signup'>SING_</Link>
             </div>
             <div>
               <Link className='navlink' to='/login'>LOGIN</Link>
