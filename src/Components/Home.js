@@ -4,7 +4,7 @@ import { Products } from './Products';
 import { auth, fs } from '../Config/Config';
 import { collection, doc, getDoc, getDocs, setDoc, onSnapshot } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-import { Analytics } from "@vercel/analytics/react"
+
 
 export const Home = () => {
 
@@ -14,7 +14,7 @@ export const Home = () => {
   const [uid, setUid] = useState(null);
 
   // Get user UID and data
-  <Analytics/>
+ 
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
